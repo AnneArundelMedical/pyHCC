@@ -1,0 +1,97 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>47cb4e5f-6c7b-4dcb-bde2-4df0444ba997</ProjectGuid>
+    <ProjectTypeGuids>{a41c8ea1-112a-4a2d-9f91-29557995525f};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pyHCC</Name>
+    <RootNamespace>pyHCC</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="lib\hcc-python\AlgorexCore.py" />
+    <Compile Include="lib\hcc-python\hcc.py" />
+    <Compile Include="run.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\algorithm.py" />
+    <Compile Include="src\app.py" />
+    <Compile Include="src\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\interoperator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\persistence.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_algorithm.py" />
+    <Compile Include="tests\__init__.py" />
+    <Compile Include="src\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tests\" />
+    <Folder Include="src\content\" />
+    <Folder Include="data\input\" />
+    <Folder Include="data\output\" />
+    <Folder Include="docs\" />
+    <Folder Include="data\input\simplecsv\" />
+    <Folder Include="src\" />
+    <Folder Include="lib\" />
+    <Folder Include="lib\hcc-python\" />
+    <Folder Include="lib\hcc-python\CMS-sas\" />
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.ini" />
+    <Content Include="src\content\coefficients.txt" />
+    <Content Include="src\content\icd10.txt" />
+    <Content Include="src\content\icd9.txt" />
+    <Content Include="lib\hcc-python\.git" />
+    <Content Include="lib\hcc-python\CMS-sas\AGESEXV2.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\F211690R.ICD10.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\F211690R.ICD9.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\SCOREVAR.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V20H87H1.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V20H87L1.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V2116H1M.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V2116H1P.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V21I0ED1.SAS" />
+    <Content Include="lib\hcc-python\CMS-sas\V21I9ED1.SAS" />
+    <Content Include="lib\hcc-python\coefficients.txt" />
+    <Content Include="lib\hcc-python\Diagram.png" />
+    <Content Include="lib\hcc-python\execution-of-model.png" />
+    <Content Include="lib\hcc-python\framework.png" />
+    <Content Include="lib\hcc-python\HCC Library Demonstration.ipynb" />
+    <Content Include="lib\hcc-python\icd10.txt" />
+    <Content Include="lib\hcc-python\icd9.txt" />
+    <Content Include="lib\hcc-python\legend.png" />
+    <Content Include="lib\hcc-python\model.png" />
+    <Content Include="lib\hcc-python\README.md" />
+    <Content Include="data\input\simplecsv\diagnosis.csv" />
+    <Content Include="data\input\simplecsv\patient.csv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
