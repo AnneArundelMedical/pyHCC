@@ -1,0 +1,3 @@
+[submodule "pyHCC/lib/hcc-python"]
+	path = pyHCC/lib/hcc-python
+	url = https://github.com/AlgorexHealth/hcc-python
